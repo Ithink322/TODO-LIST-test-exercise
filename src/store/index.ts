@@ -1,9 +1,9 @@
 import { createStore } from "vuex";
-
+import tasks from "./tasks";
+import createPersistedState from "vuex-persistedstate";
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    tasks,
+  },
+  plugins: [createPersistedState()],
 });
